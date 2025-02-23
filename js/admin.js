@@ -1,11 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
-    function startGame() {
-        const questionSet = document.getElementById("question-set").value;
-        localStorage.setItem("selectedQuestionSet", questionSet);
-        alert(`Game started with ${questionSet}`);
-        window.location.href = "game.html";
-    }
+document.addEventListener("DOMContentLoaded", function () {
+    const gameCode = Math.floor(10000 + Math.random() * 90000);
+    const audienceCode = Math.floor(10000 + Math.random() * 90000);
+    
+    document.getElementById("game-code").innerText = gameCode;
+    document.getElementById("audience-code").innerText = audienceCode;
 
-    window.startGame = startGame;
+    localStorage.setItem("gameCode", gameCode);
+    localStorage.setItem("audienceCode", audienceCode);
 });
 
+function startGame() {
+    alert("Game Started!");
+}
+
+function endGame() {
+    alert("Game Ended!");
+}
