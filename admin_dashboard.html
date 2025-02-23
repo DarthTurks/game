@@ -7,14 +7,35 @@
     <link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
-    <h1>Admin Dashboard</h1>
-    <p>Game Code: <span id="game-code"></span></p>
-    <p>Audience Code: <span id="audience-code"></span></p>
-    
+
+    <h1>Admin Panel</h1>
+
+    <!-- Admin Info -->
+    <div id="admin-info">
+        <h2>Logged in as: <span id="admin-name"></span></h2>
+        <img id="admin-avatar" src="" alt="Admin Avatar">
+    </div>
+
+    <!-- Select Question Set -->
+    <div id="question-set-container">
+        <h2>Select a Question Set</h2>
+        <select id="question-set-dropdown">
+            <option value="" disabled selected>Select a set</option>
+        </select>
+        <button onclick="createGame()">Create Game</button>
+    </div>
+
+    <!-- Game Codes (Initially Hidden) -->
+    <div id="game-codes" style="display: none;">
+        <p>Game Code: <span id="game-code"></span></p>
+        <p>Audience Code: <span id="audience-code"></span></p>
+    </div>
+
+    <!-- Player List -->
     <h2>Players Joined</h2>
     <ul id="player-list"></ul>
 
-    <button onclick="startGame()">Start Game</button>
+    <button id="start-game-btn" onclick="startGame()" style="display: none;">Start Game</button>
     <button onclick="endGame()">End Game</button>
 
     <script src="js/admin.js"></script>
