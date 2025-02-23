@@ -1,0 +1,23 @@
+name: Convert CSV to HTML
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'csv-files/*.csv'
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install Dependencies
+        run: pip install pandas pillow
+      - name: Run Conversion Script
+        run: python scripts/convert_csv_to_html.py
+
