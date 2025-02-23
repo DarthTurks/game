@@ -23,7 +23,7 @@ function adminLogin() {
     if (password in admins) {
         localStorage.setItem("admin", admins[password].name);
         localStorage.setItem("adminAvatar", admins[password].avatar);
-        window.location.href = "admin_dashboard.html";
+        window.location.href = "admin_dashboard.html"; // Redirect to the correct admin page
     } else {
         alert("Incorrect password!");
     }
