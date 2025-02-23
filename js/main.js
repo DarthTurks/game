@@ -12,22 +12,23 @@ function adminLogin() {
     const password = document.getElementById("admin-password").value.trim();
 
     const admins = {
-        "1319": { name: "Melih", avatar: "melih.png" },
-        "tosbik": { name: "Berat", avatar: "berat.png" },
-        "murmur": { name: "Umur", avatar: "umur.png" },
-        "woman": { name: "Sena", avatar: "sena.png" },
-        "admin1": { name: "Admin1", avatar: "admin1.png" },
-        "admin2": { name: "Admin2", avatar: "admin2.png" }
+        "1319": { name: "Melih", avatar: "graphics/melih.png" },
+        "tosbik": { name: "Berat", avatar: "graphics/berat.png" },
+        "murmur": { name: "Umur", avatar: "graphics/umur.png" },
+        "woman": { name: "Sena", avatar: "graphics/sena.png" },
+        "admin1": { name: "Admin1", avatar: "graphics/admin1.png" },
+        "admin2": { name: "Admin2", avatar: "graphics/admin2.png" }
     };
 
     if (password in admins) {
         localStorage.setItem("admin", admins[password].name);
-        localStorage.setItem("adminAvatar", `graphics/${admins[password].avatar}`);
-        window.location.href = "admin_panel.html";
+        localStorage.setItem("adminAvatar", admins[password].avatar);
+        window.location.href = "admin_dashboard.html";
     } else {
         alert("Incorrect password!");
     }
 }
+
 
 function joinAudience() {
     const code = document.getElementById("audience-code").value.trim();
