@@ -7,6 +7,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     localStorage.setItem("gameCode", gameCode);
     localStorage.setItem("audienceCode", audienceCode);
+
+    // Load Admin Info
+    const adminName = localStorage.getItem("admin");
+    const adminAvatar = localStorage.getItem("adminAvatar");
+
+    if (adminName && adminAvatar) {
+        document.getElementById("admin-name").innerText = adminName;
+        document.getElementById("admin-avatar").src = adminAvatar;
+    }
 });
 
 function startGame() {
