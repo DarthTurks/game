@@ -1,21 +1,61 @@
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #222;
-    color: white;
+    background-image: url("../wallpapers/main-background.jpg");
+    background-size: cover;
+    background-position: center;
     text-align: center;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: #008CBA;
     color: white;
-    text-decoration: none;
+    padding: 20px;
+}
+
+/* Centered container */
+.container {
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Login Box Styling */
+.login-box {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* Game Box - Larger */
+.game-box {
+    font-size: 1.4em;
+    padding: 30px;
+}
+
+/* Admin & Audience Boxes - Smaller */
+.admin-box, .audience-box {
+    font-size: 1em;
+    padding: 20px;
+}
+
+/* Input Fields */
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1.2em;
     border-radius: 5px;
+    border: none;
 }
 
-.button:hover {
-    background-color: #005f73;
+/* Buttons */
+button {
+    background-color: #ffcc00;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 
+button:hover {
+    background-color: #ff9900;
+}
