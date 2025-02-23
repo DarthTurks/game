@@ -1,11 +1,11 @@
-function joinGame() {
-    const nickname = document.getElementById("nickname").value.trim();
-    if (nickname === "") {
-        alert("Please enter a name!");
+function enterGame() {
+    const gameId = document.getElementById("game-id").value.trim();
+    if (gameId === "") {
+        alert("Please enter a valid Game ID!");
         return;
     }
-    localStorage.setItem("nickname", `Darth ${nickname}`);
-    window.location.href = "game.html";
+    localStorage.setItem("gameID", gameId);
+    window.location.href = "player_nickname.html"; // Redirect to nickname selection
 }
 
 function adminLogin() {
@@ -23,19 +23,18 @@ function adminLogin() {
     if (password in admins) {
         localStorage.setItem("admin", admins[password].name);
         localStorage.setItem("adminAvatar", admins[password].avatar);
-        window.location.href = "admin_dashboard.html"; // Redirect to the correct admin page
+        window.location.href = "admin_dashboard.html"; // Fixed redirection
     } else {
         alert("Incorrect password!");
     }
 }
 
-
 function joinAudience() {
-    const code = document.getElementById("audience-code").value.trim();
-    if (code.length !== 5) {
-        alert("Invalid audience code!");
+    const audienceCode = document.getElementById("audience-code").value.trim();
+    if (audienceCode === "") {
+        alert("Please enter a valid Audience Code!");
         return;
     }
-    localStorage.setItem("audienceCode", code);
+    localStorage.setItem("audienceCode", audienceCode);
     window.location.href = "audience.html";
 }
