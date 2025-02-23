@@ -10,15 +10,19 @@ function joinGame() {
 
 function adminLogin() {
     const password = document.getElementById("admin-password").value.trim();
+
     const admins = {
-        "melldawg": "Melih",
-        "admin01": "Admin1",
-        "admin02": "Admin2",
-        "admin03": "Admin3"
+        "1319": { name: "Melih", avatar: "melih.png" },
+        "tosbik": { name: "Berat", avatar: "berat.png" },
+        "murmur": { name: "Umur", avatar: "umur.png" },
+        "woman": { name: "Sena", avatar: "sena.png" },
+        "admin1": { name: "Admin1", avatar: "admin1.png" },
+        "admin2": { name: "Admin2", avatar: "admin2.png" }
     };
 
     if (password in admins) {
-        localStorage.setItem("admin", admins[password]);
+        localStorage.setItem("admin", admins[password].name);
+        localStorage.setItem("adminAvatar", `graphics/${admins[password].avatar}`);
         window.location.href = "admin_panel.html";
     } else {
         alert("Incorrect password!");
