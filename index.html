@@ -9,13 +9,11 @@
 <body>
     <div class="login-container">
         <h1>Welcome to the Game</h1>
-        <input type="text" id="nickname" placeholder="Choose a Name">
-        <button onclick="joinGame()">Enter Game</button>
+        
+        <input type="text" id="game-id" placeholder="Enter Game ID">
+        <button onclick="enterGame()">Join Game</button>
 
-        <input type="password" id="admin-password" placeholder="Admin Login">
-        <button onclick="adminLogin()">Login as Admin</button>
-
-        <input type="text" id="audience-code" placeholder="Enter Audience Code">
+        <button onclick="adminLogin()">Admin Login</button>
         <button onclick="joinAudience()">Join as Audience</button>
     </div>
 
