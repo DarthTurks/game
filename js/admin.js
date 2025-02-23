@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Function to Load Question Sets from GitHub
 function loadQuestionSets() {
     const dropdown = document.getElementById("question-set-dropdown");
-    const questionSets = ["5th-grade", "6th-grade", "7th-grade"]; // Manually update as needed
+    const questionSets = ["5th-grade", "6th-grade", "7th-grade"]; // Add new sets as needed
 
     questionSets.forEach(set => {
         let option = document.createElement("option");
@@ -38,7 +38,7 @@ function createGame() {
 
     document.getElementById("game-code").innerText = gameCode;
     document.getElementById("audience-code").innerText = audienceCode;
-    document.getElementById("game-codes").style.display = "block";
+    document.getElementById("game-details").style.display = "block";
     document.getElementById("start-game-btn").style.display = "block";
 
     localStorage.setItem("gameCode", gameCode);
