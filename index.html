@@ -2,15 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Darth Turks Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Login</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Welcome to Darth Turks Game</h1>
-    <a href="admin_panel.html" class="button">Admin Login</a>
-    <a href="game.html" class="button">Join Game</a>
-    <a href="audience.html" class="button">Watch Live</a>
+    <div class="login-container">
+        <h1>Welcome to the Game</h1>
+        <input type="text" id="nickname" placeholder="Choose a Name">
+        <button onclick="joinGame()">Enter Game</button>
+
+        <input type="password" id="admin-password" placeholder="Admin Login">
+        <button onclick="adminLogin()">Login as Admin</button>
+
+        <input type="text" id="audience-code" placeholder="Enter Audience Code">
+        <button onclick="joinAudience()">Join as Audience</button>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
-
