@@ -7,16 +7,33 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="login-container">
-        <h1>Welcome to the Game</h1>
-        
-        <input type="text" id="game-id" placeholder="Enter Game ID">
-        <button onclick="enterGame()">Join Game</button>
 
-        <button onclick="adminLogin()">Admin Login</button>
-        <button onclick="joinAudience()">Join as Audience</button>
+    <div class="container">
+        <h1>Welcome to the Ultimate Game</h1>
+
+        <!-- Game ID Section (Largest) -->
+        <div class="login-box game-box">
+            <h2>Enter Game ID</h2>
+            <input type="text" id="game-id" placeholder="Enter Game Code">
+            <button onclick="enterGame()">Join Game</button>
+        </div>
+
+        <!-- Admin Login Section -->
+        <div class="login-box admin-box">
+            <h2>Admin Login</h2>
+            <input type="password" id="admin-password" placeholder="Enter Admin Password">
+            <button onclick="adminLogin()">Login</button>
+        </div>
+
+        <!-- Audience Login Section -->
+        <div class="login-box audience-box">
+            <h2>Join as Audience</h2>
+            <input type="text" id="audience-code" placeholder="Enter Audience Code">
+            <button onclick="joinAudience()">Watch Live</button>
+        </div>
     </div>
 
     <script src="js/main.js"></script>
+
 </body>
 </html>
