@@ -1,3 +1,12 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // Load Admin Avatar (Sith Lord)
+    const adminAvatar = localStorage.getItem("adminAvatar");
+    if (adminAvatar) {
+        document.getElementById("admin-avatar").src = adminAvatar;
+    }
+});
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const audienceView = document.getElementById("audience-view");
     const playerData = JSON.parse(localStorage.getItem("playerData"));
